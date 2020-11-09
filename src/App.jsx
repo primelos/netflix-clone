@@ -2,6 +2,8 @@ import React, { useState } from 'react'
 import './App.css';
 import Row from './components/row'
 import requests from './utils/request'
+import Banner from './components/banner'
+
 
 function App() {
 
@@ -9,11 +11,14 @@ function App() {
 
   return (
     <div className="App">
-      <h1>Netflix Clone</h1>
+      {/* navbar */}
+      
+      {/* banner */}
+      <Banner />
       <Row
         title="NETLFIX ORIGINALS"
         fetchUrl={requests.fetchNetflixOriginals}
-        isLargeRow
+        isLargeRow // or isLargeRow={true}
       />
       <Row title="Trending Now" fetchUrl={requests.fetchTrending} />
       <Row title="Top Rated" fetchUrl={requests.fetchTopRated} />

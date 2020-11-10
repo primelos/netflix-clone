@@ -46,7 +46,7 @@ const Banner = ({}) => {
       {/* div 2 buttons */}
 
       {/* description */}
-
+      <div className='banner--fadeBottom' />
     </header>
   );
 };

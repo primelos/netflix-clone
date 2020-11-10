@@ -3,7 +3,7 @@ import './App.css';
 import Row from './components/row'
 import requests from './utils/request'
 import Banner from './components/banner'
-
+import Nav from './components/nav'
 
 function App() {
 
@@ -12,7 +12,7 @@ function App() {
   return (
     <div className="App">
       {/* navbar */}
-      
+      <Nav />
       {/* banner */}
       <Banner />
       <Row

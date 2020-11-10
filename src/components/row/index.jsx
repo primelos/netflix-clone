@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import YouTube from "react-youtube";
 import axios from "../../utils/axios";
 import './Row.css'
 
@@ -21,6 +22,14 @@ const Row = ({ title, fetchUrl, isLargeRow }) => {
     fetchData();
   }, [fetchUrl]);
 
+  const opts = {
+    height: '390',
+    width: '100%',
+    playerVars: {
+      // https://developers.google.com/youtube/player_parameters,
+      autoplay:1,
+    },
+  }
 //   console.table(movies);
   return (
     <div className="row">
@@ -38,6 +47,7 @@ const Row = ({ title, fetchUrl, isLargeRow }) => {
         ))}
       </div>
       {/* container -> posters */}
+        <YouTube videoId='' opts={opts} />
     </div>
   );
 };
